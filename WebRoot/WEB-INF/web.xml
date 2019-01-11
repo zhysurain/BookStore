@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>BookStore</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- User -->
+  <servlet>
+  	<servlet-name>UserServlet</servlet-name>
+  	<servlet-class>cn.user.servlet.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UserServlet</servlet-name>
+  	<url-pattern>/UserServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- AjaxUserServlet -->
+  <servlet>
+  	<servlet-name>AjaxUserServlet</servlet-name>
+  	<servlet-class>cn.user.servlet.AjaxUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AjaxUserServlet</servlet-name>
+  	<url-pattern>/AjaxUserServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- book -->
+  <servlet>
+  	<servlet-name>BookServlet</servlet-name>
+  	<servlet-class>cn.book.servlet.BookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>BookServlet</servlet-name>
+  	<url-pattern>/BookServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- category -->
+  <servlet>
+  	<servlet-name>CategoryServlet</servlet-name>
+  	<servlet-class>cn.category.servlet.CategoryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>CategoryServlet</servlet-name>
+  	<url-pattern>/CategoryServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- cart -->
+  <servlet>
+  	<servlet-name>CartServlet</servlet-name>
+  	<servlet-class>cn.cart.servlet.CartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>CartServlet</servlet-name>
+  	<url-pattern>/CartServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- order -->
+  <servlet>
+  	<servlet-name>OrderServlet</servlet-name>
+  	<servlet-class>cn.order.servlet.OrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>OrderServlet</servlet-name>
+  	<url-pattern>/OrderServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- UserFilter -->
+  <filter>
+  	<filter-name>UserFilter</filter-name>
+  	<filter-class>cn.filter.UserFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>UserFilter</filter-name>
+  	<url-pattern>/jsp/main.jsp</url-pattern>
+  	<dispatcher>FORWARD</dispatcher>
+  	<dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
+  
+  <!-- AdminServlet -->
+  <servlet>
+  	<servlet-name>AdminServlet</servlet-name>
+  	<servlet-class>cn.admin.servlet.AdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AdminServlet</servlet-name>
+  	<url-pattern>/AdminServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- AdminFilter -->
+  <filter>
+  	<filter-name>AdminFilter</filter-name>
+  	<filter-class>cn.filter.AdminFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>AdminFilter</filter-name>
+  	<url-pattern>/jsp/admin/*</url-pattern>
+  	<dispatcher>FORWARD</dispatcher>
+  	<dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>AdminFilter</filter-name>
+  	<url-pattern>/AdminServlet</url-pattern>
+  	<dispatcher>FORWARD</dispatcher>
+  	<dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
+  
+</web-app>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+	<default-config>
+		<property name="jdbcUrl">jdbc:mysql://10.2.30.36:3306/test_py</property>
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="user">dingding</property>
+		<property name="password">szuZguJTv9</property>
+		<property name="acquireIncrement">3</property>
+		<property name="initialPoolSize">10</property>
+		<property name="minPoolSize">2</property>
+		<property name="maxPoolSize">10</property>
+		<property name="maxIdleTime">3000</property>
+	</default-config>
+</c3p0-config>

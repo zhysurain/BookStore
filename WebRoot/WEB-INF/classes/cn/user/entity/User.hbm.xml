@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<!-- 1 配置类和表对应 
+		class标签
+		name属性：实体类全路径
+		table属性：数据库表名称
+	-->
+	<class name="cn.user.entity.User" table="tb_user">
+		<id name="uid" column="uid">
+			<generator class="native"></generator>
+		</id>
+		<property name="username" cloumn="username"></property>
+		<property name="password" cloumn="password"></property>
+		<property name="email" cloumn="email"></property>
+		<property name="code" cloumn="code"></property>
+		<property name="state" cloumn="state"></property>
+		<property name="insertTime" cloumn="insert_time"></property>
+		<property name="updateTime" cloumn="update_time"></property>
+	</class>
+</hibernate-mapping>
