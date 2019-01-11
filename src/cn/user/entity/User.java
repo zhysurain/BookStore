@@ -59,9 +59,9 @@ public class User {
 	public void setUpdate_time(Timestamp update_time) {
 		this.update_time = update_time;
 	}
-	@Override
-	public String toString() {
-		return "User [uid=" + uid + ", username=" + username + ", password=" + password + ", email=" + email + ", code="
-				+ code + ", insert_time=" + insert_time + ", update_time=" + update_time + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "User [uid=" + uid + ", username=" + username + ", password=" + password + ", email=" + email + ", code="
+//				+ code + ", insert_time=" + insert_time + ", update_time=" + update_time + "]";
+//	}
 }
